@@ -8,6 +8,6 @@ php:
 before_script:
   - lsb_release -a
   - sudo apt-get update
-  - sudo apt-get install libssh2-1 php-ssh2
+  - sudo apt-get install libssh2-1 php-ssh2 -y
 
 script: php -m | grep ssh2
