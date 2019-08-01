@@ -8,6 +8,7 @@ php:
 before_script:
   - lsb_release -a
   - sudo apt-get update && sudo apt-get install libssh2-1 -y
+  - printf "\n" | pecl install ssh2-1.1.2
   - echo "extension=ssh2.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - ssh-keygen -N '' -f ~/.ssh/id_rsa
   - cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
