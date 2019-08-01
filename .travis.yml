@@ -6,6 +6,7 @@ php:
   - 7.3
 
 before_script:
+  - lsb_release -a
   - sudo apt-get update
   - sudo apt-get install libssh2–1-dev libssh2–1 php-ssh2
 
